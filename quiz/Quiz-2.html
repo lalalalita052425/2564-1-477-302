@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จังหวัดภูเก็ต</title>
+    <style>
+        body {
+            color: #009698;
+            font-family: 'Kanit', cursive;
+            font-size: 3em;
+        }
+        
+        p {
+            font-weight: normal;
+            text-align: center;
+        }
+        
+        a {
+            font: normal 2em;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        img {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #cde5bf;
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <center><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Seal_Surat_Thani.png" class="center" width="20%" height="20%"></center>
+    </br>
+    <h4 style="text-align: center;" class="thick">สุราษฎร์เมืองร้อยเกาะ</h4>
+    <h6 style="text-align: center;" class="light">เมืองร้อยเกาะ เงาะอร่อย หอยใหญ่ ไข่แดง แหล่งธรรมะ</h6>
+    <div>
+        <dialog id="เกาะสมุย">
+            <h1>เกาะสมุย</h1>
+            <p><q>เกาะสมุย เป็นเกาะที่มีขนาดใหญ่เป็นอันดับ 3 ของประเทศไทย รองจากเกาะภูเก็ต และเกาะช้าง ตั้งอยู่ในอ่าวไทย
+            และเป็นหนึ่งในเกาะที่มีชื่อเสียงมากที่สุดของจังหวัดสุราษฎร์ธานี[1]
+            
+            เกาะสมุย เป็นเกาะที่มีชื่อเสียงโด่งดังไปทั่วโลก ซึ่งนักท่องเที่ยวทั้งชาวไทยและชาวต่างชาติ
+            ก็ต่างขนานนามให้เกาะสมุยว่าเป็น "สวรรค์กลางอ่าวไทย"
+            เนื่องจากเกาะสมุยมีความอุดมสมบูรณ์ไปด้วยทรัพยากรการท่องเที่ยวที่มีความโดดเด่น สวยงาม มีเสน่ห์แตกต่างกันไป
+            ไม่ว่าจะเป็นสถานที่ท่องเที่ยวทางธรรมชาติที่สวยงาม อาทิเช่น น้ำทะเลใสบริสุทธิ์
+            หาดทรายขาวทอดขนานไปกับทิวต้นมะพร้าวริมชายหาด และนอกจากธรรมชาติชายทะเลแล้ว ยังมีน้ำตกที่มีน้ำใสเย็นเกือบตลอดทั้งปี
+            มีแหล่งท่องเที่ยวที่แสดงถึงศิลปวัฒนธรรมของชาวท้องถิ่น เช่น วัดสำเร็จ วัดละไม วัดพระใหญ่ เจดีย์แหลมสอ ฯลฯ
+            
+            ในท้องทะเลรอบเกาะสมุยยังมีแนวปะการังอยู่ทั่วไป มีแหล่งปะการังที่อุดมสมบูรณ์อยู่ทางตอนใต้ของเกาะ
+            ซึ่งเป็นแหล่งดำน้ำตื้นที่มีชื่อเสียงของหมู่เกาะสมุย</q>
+            </p>
+            <img style="width: 50%; display: block; margin-left: auto;margin-right: auto;" src="https://sites.google.com/a/samakkhi.ac.th/sthan-thi-thxng-theiyw-ni-prathesthai/_/rsrc/1488554982477/xuthyan-haeng-chati-khea-sk/20140109152118.jpg" alt="">
+            <button id="hide">Close</button>
+        </dialog>
+        <button id="show">ข้อมูลทั่วไป</button>
+    </div>
+    <script type="text/JavaScript">
+        (function() { var dialog = document.getElementById('เกาะสมุย'); document.getElementById('show').onclick = function() { dialog.showModal(); }; document.getElementById('hide').onclick = function() { dialog.close(); } })();
+    </script>
+    <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Flag_Surat_Thani_Province.png/1920px-Flag_Surat_Thani_Province.png" alt="" width="20%" height="20%"></center>
+
+    <body>
+        <small>
+            <p id="demo">คลิกที่ปุ่มเพื่อรับตำแหน่งของคุณ.</p>
+        </small>
+        <button onclick="getLocation()">คลิก</button>
+        <div id="mapholder"></div>
+        <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoKoNVKdXRrp8YDgara5W1m2nfTU1dG5g&amp;callback=initMap" type="text/javascript">
+        </script>
+        <script>
+            var x = document.getElementById("demo");
+
+            function getLocation() {
+                if (navigator.geolocation) {
+                    /* glat = prompt("Enter your latitude", 0);
+                    glon = prompt("Enter your longitude", 0);
+                    showPosition(glat, glon); */
+                    navigator.geolocation.getCurrentPosition(showPosition, showError);
+                } else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+
+            function showPosition(position) {
+                lat = position.coords.latitude;
+                lon = position.coords.longitude;
+                //glat = [6.998068, 6.998838] ;
+                //glon = [100.482465, 100.480831];
+                latlon = new google.maps.LatLng(lat, lon)
+                mapholder = document.getElementById('mapholder')
+                mapholder.style.height = '350px';
+                mapholder.style.width = '500px';
+
+                var myOptions = {
+                    center: latlon,
+                    zoom: 16,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    mapTypeControl: false,
+                    navigationControlOptions: {
+                        style: google.maps.NavigationControlStyle.SMALL
+                    }
+                }
+
+                var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
+                var marker = new google.maps.Marker({
+                    position: latlon,
+                    map: map,
+                    title: "คุณอยู่ที่นี่!"
+                });
+            }
+
+            function showError(error) {
+                switch (error.code) {
+                    case error.PERMISSION_DENIED:
+                        x.innerHTML = "User denied the request for Geolocation."
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        x.innerHTML = "Location information is unavailable."
+                        break;
+                    case error.TIMEOUT:
+                        x.innerHTML = "The request to get user location timed out."
+                        break;
+                    case error.UNKNOWN_ERROR:
+                        x.innerHTML = "An unknown error occurred."
+                        break;
+                }
+            }
+        </script>
+        <script>
+            function chkUsername() {
+                if (typeof(Storage) !== "undefined") {
+                    if (localStorage.username) {
+                        document.getElementById("div1").innerHTML = localStorage.username;
+                    } else {
+                        document.getElementById("div1").innerHTML = "<input type='text' id='username'>";
+                    }
+                } else {
+                    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+                }
+            }
+
+            function saveUsername() {
+                uname = document.getElementById("username");
+                localStorage.username = uname.value;
+                chkUsername();
+            }
+
+            function delUsername() {
+                localStorage.removeItem("username");
+                chkUsername();
+            }
+        </script>
+
+        <body onload="chkUsername()">
+            "ชื่อผู้ใช้:"
+            <div id="div1">
+                <input type="text" id="username">
+            </div>
+            "รหัสผ่าน:"
+            <div id="div2">
+                <input type="password" id="password">
+            </div>
+            <p>
+                <small><button onclick="saveUsername()" type="button">บันทึก</button></small>
+                <small><button onclick="delUsername()" type="button">ลบ</button></small>
+            </p>
+            <div id="result"></div>
+        </body>
+    </body>
+</body>
+
+</html>
